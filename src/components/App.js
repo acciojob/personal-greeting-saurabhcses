@@ -6,13 +6,15 @@ const App = () => {
 
   return (
     <div>
+      {/* Do not remove the main div */}
       <input
         type="text"
+        id="name"
         placeholder="Enter your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      {name && <h3>Hello, {name}!</h3>}
+      {name !== "" && <p>Hello {name}!</p>}
     </div>
   );
 };
